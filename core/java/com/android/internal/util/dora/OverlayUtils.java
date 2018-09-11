@@ -1,5 +1,5 @@
 /*
-* Copyright (C) 2019 The Pixel Experience Project
+* Copyright (C) 2021 The DoraemonOS Project
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-package com.android.internal.util.streak;
+package com.android.internal.util.dora;
 
 public class OverlayUtils {
     public static String[] AllPackages = {};
