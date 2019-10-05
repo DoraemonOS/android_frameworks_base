@@ -21,4 +21,7 @@
     <dimen name="dialog_side_padding">24dp</dimen>
     <dimen name="dialog_bottom_padding">18dp</dimen>
 
+    <!-- Bottom margin size when fingerprint in display is active -->
+    <dimen name="keyguard_indication_margin_bottom_fingerprint_in_display">@dimen/keyguard_indication_margin_bottom</dimen>
+
 </resources>
