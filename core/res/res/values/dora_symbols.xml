@@ -28,4 +28,9 @@
 
     <!-- Whether device can force navbar disabling -->
     <java-symbol type="bool" name="config_canForceDisableNavigationBar" />
+
+    <!-- App lock -->
+    <java-symbol type="string" name="unlock_application" />
+    <java-symbol type="array" name="config_appLockAllowedSystemApps" />
+
 </resources>
