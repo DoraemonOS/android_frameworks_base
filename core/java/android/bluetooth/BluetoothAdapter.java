@@ -3020,13 +3020,13 @@ public final class BluetoothAdapter {
         if (bshClass != null) {
             Log.d(TAG, "Able to get BSH class handle");
             try {
-                bshClose =  bshClass.getDeclaredMethod("close", null);
+                bshClose =  bshClass.getDeclaredMethod("close", (Class<?>)null);
             } catch (NoSuchMethodException e) {
                 Log.e(TAG, "no BSH:isSupported method exists");
             }
             if (bshClose != null) {
                 try {
-                   bshClose.invoke(proxy, null);
+                   bshClose.invoke(proxy, (Class<?>)null);
                 } catch(IllegalAccessException e) {
                    Log.e(TAG, "bshClose IllegalAccessException");
                 } catch (InvocationTargetException e) {
@@ -3053,7 +3053,7 @@ public final class BluetoothAdapter {
         if (bshClass != null) {
             Log.d(TAG, "Able to get BSH class handle");
             try {
-                bshSupported =  bshClass.getDeclaredMethod("isSupported", null);
+                bshSupported =  bshClass.getDeclaredMethod("isSupported", (Class<?>)null);
             } catch (NoSuchMethodException e) {
                 Log.e(TAG, "no BSH:isSupported method exists: gdm");
             }
@@ -3068,7 +3068,7 @@ public final class BluetoothAdapter {
         }
         if (bshClass != null && bshSupported != null && bshCons != null) {
             try {
-                isProfileSupported = (boolean)bshSupported.invoke(null, null);
+                isProfileSupported = (boolean)bshSupported.invoke(null, (Object[])null);
             } catch(IllegalAccessException e) {
                 Log.e(TAG, "BSH:isSupported IllegalAccessException");
             } catch (InvocationTargetException e) {
@@ -3327,13 +3327,13 @@ public final class BluetoothAdapter {
         }
         if (broadcastClass != null) {
             try {
-                broadcastClose =  broadcastClass.getDeclaredMethod("close", null);
+                broadcastClose =  broadcastClass.getDeclaredMethod("close", (Class<?>)null);
             } catch (NoSuchMethodException e) {
                 Log.e(TAG, "no Broadcast:close method exists");
             }
             if (broadcastClose != null) {
                 try {
-                    broadcastClose.invoke(proxy, null);
+                    broadcastClose.invoke(proxy, (Class<?>)null);
                 } catch(IllegalAccessException | InvocationTargetException ex) {
                     ex.printStackTrace();
                 }
